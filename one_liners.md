@@ -1,2 +1,4 @@
-# Using this one with KeyboardMaestro to extract text embedded in spans, divs, etc.
+# JavaScript One-Liners
+
+I used this one with KeyboardMaestro to extract text embedded in spans, divs, etc.
 `document.getElementById("lblPayPeriodNumber").innerText;`
