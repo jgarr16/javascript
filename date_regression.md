@@ -1,3 +1,5 @@
+Doesn't take any arguments. Cycles through the number of days denoted, from today, backward.
+
 ```
 let interval = 0;
 while (interval < 25) {
