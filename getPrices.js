@@ -1,5 +1,4 @@
-
-
+// First pass at building a JavaScript app to check crypto prices and calculate the value of a small portfolio. It's only working for a single coin at a time right now.
 
 ```
 /**
