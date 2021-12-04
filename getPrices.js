@@ -21,14 +21,22 @@ function getPrices (coin,action) {
         console.log(`statusCode: ${res.statusCode}`)
         res.on('data', d => {
             process.stdout.write(d)
+            return coin, d.amount
         })
     })
     req.on('error', error => {
         console.error(error)
     })
     req.end()
-
 }
 
-module.exports = getPrices("ETH","sell");
+function checkCoins() {
+
+}
+const coinData = []
+const coins = ["ETH","MATIC","SOL","BTC","AVAX","SHIB","ADA"]
+for (const coin of coins) {
+    const newCoin = module.exports = getPrices(coin,"sell");
+    coinData.push(newCoin)
+}
 ```
