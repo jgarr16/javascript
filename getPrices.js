@@ -1,6 +1,5 @@
 // First pass at building a JavaScript app to check crypto prices and calculate the value of a small portfolio. I've got it where I can pass the 
 // coin type (e.g., ETH, BTC, etc.) and the coin action (e.g., buy, sell, spot) by using arguments; just need to figure out how to call them remotely.
-// still working
 
 ```
 /**
