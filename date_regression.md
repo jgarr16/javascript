@@ -1,4 +1,4 @@
-Doesn't take any arguments. Cycles through the number of days denoted, from today, backward.
+Doesn't take any arguments. Cycles through the number of days denoted in the while loop, from today, backward.
 
 ```
 let interval = 0;
