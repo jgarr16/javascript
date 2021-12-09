@@ -1,0 +1,66 @@
+<%* if (tp.file.exists("[["+tp.date.now()+".md]]")) { -%>
+<%* mtg_day = tp.date.tomorrow("dddd") -%>
+<%* mtg_iso = tp.date.tomorrow() -%>
+<%* } else { _%>
+<%* mtg_day = tp.date.now("dddd") -%>
+<%* mtg_iso = tp.date.now() -%>
+<%* } -%>
+<% (await tp.file.rename(mtg_iso)) _%>
+#### Daily <% mtg_iso %>
+#[[<% mtg_day %>]] #[[daily]]
+
+## Day Planner
+<%* if (mtg_day === "Monday") { _%>
+--[ ] 05:00 Exercise 
+--[ ] 07:00 Breakfast 
+--[ ] 07:45 IT Ops
+--[ ] 08:00 Backoffice
+--[ ] 09:30 [EC](<% mtg_iso %>_ec)
+--[ ] 11:00 Backoffice
+--[ ] 11:30 [CSM](<% mtg_iso %>_csm)
+--[ ] 13:00 Backoffice
+--[ ] 15:30 Bryan
+--[ ] 16:30 Backoffice
+<%* } else if (mtg_day === "Tuesday") { _%> 
+--[ ] 05:00 Exercise 
+--[ ] 07:00 Breakfast 
+--[ ] 07:45 IT Ops
+--[ ] 08:00 Backoffice
+--[ ] 09:00 [CLT](<% mtg_iso %>_clt)
+--[ ] 11:00 Backoffice
+--[ ] 14:30 [Sr. Ldrs.](<% mtg_iso %>_sr_ldrs)
+--[ ] 15:30 Backoffice
+--[ ] 15:00 [Chiefs](<% mtg_iso %>_chiefs)
+--[ ] 16:00 Backoffice
+<%* } else if (mtg_day === "Wednesday") { _%>
+--[ ] 05:00 Exercise 
+--[ ] 07:00 Breakfast 
+--[ ] 07:45 IT Ops
+--[ ] 08:00 Backoffice
+--[ ] 08:35 MAP
+--[ ] 09:30 [Code IO](<% mtg_iso %>_codeio)
+--[ ] 10:00 Backoffice
+--[ ] 14:00 CIM
+--[ ] 16:00 Backoffice
+<%* } else if (mtg_day === "Thursday") { _%>
+--[ ] 05:00 Exercise 
+--[ ] 07:00 Breakfast 
+--[ ] 07:45 IT Ops
+--[ ] 08:00 Agcy FoW
+--[ ] 10:00 Backoffice
+--[ ] 13:00 ME Tag
+--[ ] 15:00 Backoffice
+<%* } else if (mtg_day === "Friday") { _%>
+--[ ] 05:00 Exercise 
+--[ ] 07:00 Breakfast 
+--[ ] 07:45 IT Ops
+--[ ] 08:00 Backoffice
+--[ ] 10:00 [Stebel](<% mtg_iso %>_stebel)
+<%* } else if (mtg_day === "Saturday") { _%>
+<%* } else if (mtg_day === "Sunday") { _%>
+<%* } %>
+## Todo
+--[ ]
+
+## Accomplishments
+--[ ]
