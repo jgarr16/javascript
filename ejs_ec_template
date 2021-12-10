@@ -1,0 +1,59 @@
+<%_* mtgTitle = "ec" _%>
+<%_* mtgDay = "Monday" _%>
+<%_* mtgDayNo = 1 _%>
+<%_* var count = 0 _%>
+<%_* var link = "" _%>
+<%_* var repeat = 0 _%>
+<%_* while (repeat == 0) { _%>
+<%_* count++ _%>
+<%_* lastMtgDate = tp.date.now("YYYY-MM-DD", -count)  _%>
+<%_* if (tp.file.exists("[["+lastMtgDate+"_"+mtgTitle+".md]]")) var link = ("[["+lastMtgDate+"_"+mtgTitle+"]]") _%>
+<%_* if (tp.file.exists("[["+lastMtgDate+"_"+mtgTitle+".md]]")) var repeat = 1 _%> 
+<%_* } _%>
+<%* mtgDate =tp.date.weekday("YYYY-MM-DD", 1) -%>
+<% (await tp.file.rename(mtgDate+"_"+mtgTitle)) _%>
+#### <%mtgTitle.toUpperCase()%> - <% mtgDate %>
+#<%mtgTitle%> 
+
+- Eugene: 
+	- ViTS:
+	- ARC:
+- Carol:
+- Dave K:
+- Jay B:
+- Lynda:
+- CFO: 
+- OCHCO:
+- ODEO:
+- Inclusion:
+- Legislative:
+- OCIO:
+- Legal:
+- Comms:
+- AQMS: 
+- Code A:
+- Code D: 
+- Code J: 
+- Code P:
+- Code Q: 
+- Code R:
+- Code S:
+- Code T:
+- Procurement: 
+- Partnerships:
+- NRP:
+- OSTEM:
+- Union:
+- Army:
+- Chiefs:
+	- Chief Scientist:
+	- Chief Technologist:
+	- Chief Engineer:
+- Intstitutes:
+	- NAI - Jon Rask:
+	- NARI - P.K.:
+	- SSERVI - Greg Schmidt:
+	- S3VI - Bruce Yost:
+
+
+!<% link %>
