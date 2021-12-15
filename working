@@ -1,0 +1,24 @@
+<%_* mtg_title = "agcy_fow" _%>
+
+<%_* if (mtg_title === 'chiefs') mtg_day = "Tuesday", mtg_day_no = 2, mtg_title_pretty = "Chiefs", agenda = "- Chiefs:\n- Chiefs:\n- Chiefs:" _%>
+<%_* if (mtg_title === 'agcy_fow') mtg_day = "Wednesday", mtg_day_no = 3, mtg_title_pretty = "Agency FoW", agenda = "- Agency FoW:\n- Agency FoW:\n- Agency FoW:" _%>
+
+<%_* var count = 0 _%>
+<%_* var link = "" _%>
+<%_* var repeat = 0 _%>
+
+<%_* while (repeat == 0) { _%>
+<%_* count++ _%>
+<%_* last_mtg_date = tp.date.now("YYYY-MM-DD", -count)  _%>
+<%_* if (tp.file.exists("[["+last_mtg_date+"_"+mtg_title+".md]]")) var link = ("[["+last_mtg_date+"_"+mtg_title+"]]") _%>
+<%_* if (tp.file.exists("[["+last_mtg_date+"_"+mtg_title+".md]]")) var repeat = 1 _%> 
+<%_* } _%>
+<%* mtg_date = tp.date.weekday("YYYY-MM-DD", mtg_day_no) -%>
+<% (await tp.file.rename(mtg_date+"_"+mtg_title)) _%>
+#### <%mtg_title_pretty%> - <% mtg_date %>
+#<%mtg_title%> 
+#<%mtg_day%>
+
+<%agenda%>
+
+!<% link %>
