@@ -1,4 +1,5 @@
 // Obsidian Templater script I'm building to manage all of my meetings from one place. Maybe... I have one tp.user.--script-- tied to this one to count the files in the vault
+// chasing down a bug; almost there
 
 <%_* mtg_title = "agcy_fow" _%>
 <%_* if (mtg_title === 'chiefs') mtg_day = "Tuesday", mtg_day_no = 2, mtg_title_pretty = "Chiefs", agenda = "- Chiefs:\n- Chiefs:\n- Chiefs:" _%>
